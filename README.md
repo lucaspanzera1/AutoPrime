@@ -16,3 +16,10 @@
 ![AutoPrime](content/Mockup%201920x1080%20-%20AutoPrime.png)
 - 🖥️ Criação do Mockup base para computador.
 
+- ---
+
+## Segunda Etapa 15.11.2024 
+
+![AutoPrime](content/Mockup%20390x844%20-%20AutoPrime.png)
+- 📱 Criação do Mockup base para computador.
+
