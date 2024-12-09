@@ -15,6 +15,11 @@ A AutoPrime é uma landing page moderna que reflete a excelência e profissional
 
 ## 🚀 Como Executar o Projeto
 ```bash
+# Acesse
+https://auto-prime-three.vercel.app
+
+# Ou
+
 # Clone este repositório
 $ git clone https://github.com/lucaspanzera1/AutoPrime.git
 
@@ -22,19 +27,6 @@ $ git clone https://github.com/lucaspanzera1/AutoPrime.git
 $ cd AutoPrime
 
 # Abra o arquivo index.html em seu navegador
-```
-
-## 📁 Estrutura do Projeto
-
-```plaintext
-nexustech/
-├── content/
-├── resources/
-│   ├── css/
-│   ├── js/
-│   └── images/
-├── index.html
-└── README.md
 ```
 
 ## 🔄 Updates Futuros
