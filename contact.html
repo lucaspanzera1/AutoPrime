@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Prime - Excelência em cada detalhe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel='shorcut icon' href="resources/img/logo.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/index.css?v=<?= time() ?>">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href=""><img src="resources/img/logo.png" width="50px" alt="Logo"></a>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" onclick="closeMenu()">HOME</a>
+                <a href="services.html" onclick="closeMenu()">SERVIÇOS</a>
+                <a href="about.html" onclick="closeMenu()">SOBRE NÓS</a>
+                <a href="contact.html" onclick="closeMenu()">CONTATO</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-page" id="home">
+        <div class="hero-content-page">
+            <h1>CONTATO</h1>
+            <div class="hero-autoprime-grid">
+                <div class="hero-autoprime">
+                    <h2>AUTOPRIME</h2>
+                    <h3>Excelência em cada detalhe.</h3>
+                </div>
+                <img src="resources/img/logo.png">
+            </div>
+        </div>
+    </section>
+
+    <section class="loc" id="loc">
+        <div class="loc-grid">
+            <div class="loc-p">
+                <h1>Endereço</h1>
+                <p>R. Manoel Macedo, 16 - São Cristóvão,</br> Belo Horizonte - MG, 31110-440</p>
+                <h1>Telefone</h1>
+                <p>(31) 2555-0040</p>
+                <h1>WhatsApp</h1>
+                <p>(31) 97152-0040</p>
+                <h1>Email</h1>
+                <p>autoprimebh@gotmail.com</p>
+            </div>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d625.9580592643704!2d-43.94393505461644!3d-19.90291972500787!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa69b5d03360271%3A0x396ecd8790f66d69!2sAUTO%20PRIME%20Est%C3%A9tica%20e%20Manuten%C3%A7%C3%A3o!5e0!3m2!1spt-BR!2sbr!4v1733847409455!5m2!1spt-BR!2sbr" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+    </section>
+
+    <footer>
+        <div class="logo">AUTO PRIME</div>
+        <div class="address">
+            R. Manoel Macedo, 16 - São Cristóvão, Belo Horizonte - MG, 31110-440
+        </div>
+        <div class="social">
+            <a href=""><img src="resources/svg/facebook-svgrepo-com.svg" ></a>
+            <a href=""><img src="resources/svg/instagram-svgrepo-com.svg" ></a>
+            <a href=""><img src="resources/svg/whatsapp-svgrepo-com.svg" ></a>
+        </div>
+    </footer>
+    <script src="resources/js/index.js"></script>
+</body>
+</html>

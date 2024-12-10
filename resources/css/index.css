@@ -214,7 +214,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
-
+    gap: 25px;
 }
 
 .about-p{
@@ -232,6 +232,37 @@ nav {
     width: 25vw;
 }
 
+
+.mission {
+    padding: 6rem 1rem;
+    background-color: var(--light);
+    display: flex;
+    justify-content: center;
+    color: var(--primary);
+}
+
+.mission-grid{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 25px;
+    max-width: 1200px;
+}
+
+.mission-p{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+}
+.mission p{
+    font-size: 1.3rem;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+.mission img{
+    width: 25vw;
+}
 
 /* Features Section */
 .features {
@@ -335,7 +366,38 @@ nav {
     background-color: #717171;
 }
 
+.loc {
+    padding: 5rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+.loc-grid{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+
+.loc-p{
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    width: 400px;
+}
+.loc p{
+    font-size: 1.3rem;
+    text-align: justify;
+    margin-bottom: 1rem;
+}
+
+.loc img{
+    width: 25vw;
+}
+iframe{
+    width: 800px;
+    height: 450px;
+}
 
 /* Footer */
 footer {
@@ -348,6 +410,18 @@ footer {
     margin-top: 1rem;
     font-size: 0.9rem;
     color: #ccc;
+}
+.social{
+    margin-top: 1.2rem;
+}
+.social img{
+    width: 1.2vw;
+    color: white;
+    transition: 0.3s;
+}
+.social img:hover{
+    transform: translateY(-5px);
+    cursor: pointer;
 }
 
 button{
@@ -419,6 +493,15 @@ button:hover{
     
     .about img{
      display: none;
+    }
+    .mission img{
+        display: none;
+       }
+       .loc-grid{
+        flex-direction: column;
+       }
+       iframe{
+        width: 100%;
     }
 }
 
