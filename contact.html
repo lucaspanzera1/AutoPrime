@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentários de Clientes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+            user-select: none;
+        }
+
+        .comments-container {
+            width: 100%;
+            max-width: 800px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .comments-wrapper {
+            display: flex;
+            transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .comment-card {
+            min-width: 50%;
+            padding: 25px;
+            box-sizing: border-box;
+        }
+
+        .comment-inner {
+            background-color: white;
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            margin: 0 10px;
+        }
+
+        .navigation-dots {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .dot {
+            width: 10px;
+            height: 10px;
+            background-color: #e0e0e0;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .dot.active {
+            background-color: #333;
+        }
+
+        @media (max-width: 600px) {
+            .comment-card {
+                min-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="comments-container">
+        <div class="comments-wrapper" id="commentsWrapper">
+            <!-- Os comentários serão gerados dinamicamente pelo JavaScript -->
+        </div>
+        <div class="navigation-dots" id="navigationDots"></div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const comentarios = [
+                {
+                    texto: "Serviço incrível! Superou todas as minhas expectativas.",
+                    autor: "Maria Silva"
+                },
+                {
+                    texto: "Atendimento de primeira. Recomendo muito!",
+                    autor: "João Santos"
+                },
+                {
+                    texto: "Produto de qualidade incomparável.",
+                    autor: "Ana Oliveira"
+                },
+                {
+                    texto: "Uma experiência única e extraordinária.",
+                    autor: "Pedro Souza"
+                },
+                {
+                    texto: "Precisão e excelência em cada detalhe.",
+                    autor: "Carla Mendes"
+                }
+            ];
+
+            const wrapper = document.getElementById('commentsWrapper');
+            const dotsContainer = document.getElementById('navigationDots');
+            
+            let currentIndex = 0;
+            let clonedComentarios = [...comentarios, ...comentarios, ...comentarios];
+
+            function criarComentarios() {
+                wrapper.innerHTML = '';
+                clonedComentarios.forEach((comentario, index) => {
+                    const card = document.createElement('div');
+                    card.classList.add('comment-card');
+                    card.innerHTML = `
+                        <div class="comment-inner">
+                            <p>"${comentario.texto}"</p>
+                            <p><strong>${comentario.autor}</strong></p>
+                        </div>
+                    `;
+                    wrapper.appendChild(card);
+                });
+            }
+
+            function criarPontos() {
+                dotsContainer.innerHTML = '';
+                for (let i = 0; i < comentarios.length; i++) {
+                    const dot = document.createElement('div');
+                    dot.classList.add('dot');
+                    if (i === 0) dot.classList.add('active');
+                    dot.addEventListener('click', () => moveToComment(i));
+                    dotsContainer.appendChild(dot);
+                }
+            }
+
+            function moveToComment(index) {
+                currentIndex = index;
+                const offset = -(index * 50);
+                wrapper.style.transform = `translateX(${offset}%)`;
+
+                Array.from(dotsContainer.children).forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                });
+            }
+
+            criarComentarios();
+            criarPontos();
+
+            let startX = 0;
+            let isDragging = false;
+            let startTime = 0;
+
+            wrapper.addEventListener('mousedown', (e) => {
+                startX = e.clientX;
+                isDragging = true;
+                startTime = Date.now();
+                wrapper.style.transition = 'none';
+            });
+
+            wrapper.addEventListener('mousemove', (e) => {
+                if (!isDragging) return;
+                
+                const moveX = e.clientX - startX;
+                const percentageMoved = (moveX / wrapper.offsetWidth) * 100;
+                
+                wrapper.style.transform = `translateX(calc(${-currentIndex * 50}% + ${percentageMoved}%))`;
+            });
+
+            wrapper.addEventListener('mouseup', (e) => {
+                if (!isDragging) return;
+                
+                const endTime = Date.now();
+                const moveX = e.clientX - startX;
+                const timeDiff = endTime - startTime;
+                
+                wrapper.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                
+                const threshold = wrapper.offsetWidth / 3;
+                const velocityThreshold = 0.5;
+                
+                if (Math.abs(moveX) > threshold || (Math.abs(moveX) > 50 && timeDiff < velocityThreshold)) {
+                    if (moveX > 0) {
+                        currentIndex = (currentIndex - 1 + comentarios.length) % comentarios.length;
+                    } else {
+                        currentIndex = (currentIndex + 1) % comentarios.length;
+                    }
+                }
+                
+                moveToComment(currentIndex);
+                isDragging = false;
+            });
+
+            wrapper.addEventListener('mouseleave', () => {
+                if (isDragging) {
+                    wrapper.style.transition = 'transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                    moveToComment(currentIndex);
+                    isDragging = false;
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -13,12 +13,17 @@
 <body>
     <header>
         <nav>
-            <img src="resources/img/logo.png" width="50px">
-            <div class="nav-links">
-                <a href="#home">HOME</a>
-                <a href="#services">SERVIÇOS</a>
-                <a href="#about">SOBRE NÓS</a>
-                <a href="#contact">CONTATO</a>
+            <a href=""><img src="resources/img/logo.png" width="50px" alt="Logo"></a>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" onclick="closeMenu()">HOME</a>
+                <a href="services.html" onclick="closeMenu()">SERVIÇOS</a>
+                <a href="about.html" onclick="closeMenu()">SOBRE NÓS</a>
+                <a href="contact.html" onclick="closeMenu()">CONTATO</a>
             </div>
         </nav>
     </header>
@@ -87,30 +92,29 @@
         <div class="section-title">
             <h2>O que dizem nossos clientes?</h2>
         </div>
-        <div class="testimonials-grid">
-            <a href="https://g.co/kgs/FdqgYqv" class="testimonial-card" target="_blank">
-                <p>"Top de linha..super profissionais e atentos ao serviços prestados..."</p>
-                <div class="person-grid">
-                    <img src="resources/img/person_1.png" alt="">
-                    <strong>Julio Costa</strong>
-                </div>
-            </a>
-            
-            <a href="https://g.co/kgs/T5smFzJ" class="testimonial-card" target="_blank"> 
-                <p>"Super satisfeita com o trabalho desses profissionais, super indico, em especial Thiago e Felipe super atenciosos!!! Muito obrigado."</p>
-                <div class="person-grid">
-                    <img src="resources/img/person_2.png" alt="">
-                    <strong>Solange Feliciano</strong>
-                </div>
-            </a>
+        <div class="testimonials-container">
+            <div class="testimonials-grid">
+            </div>
         </div>
+        <div class="navigation-dots">
+        </div>
+        <script src="resources/js/coments.js"></script>
     </section>
+
 
     <section class="about" id="about">
         <div class="section-title">
             <h2>Sobre Nós</h2>
         </div>
-        <p>Somos uma empresa dedicada a troca de óleo e filtros de motor e transmissão, manutenção preventiva e corretiva e também na higienização e estética automotiva, comprometida em oferecer soluções inovadoras e serviços de alta qualidade. Com uma equipe experiente e apaixonada, buscamos constantemente superar as expectativas dos nossos clientes. </p>
+        
+        <div class="about-grid">
+            <div class="about-p">
+                <p>Somos uma empresa dedicada a troca de óleo e filtros de motor e transmissão, manutenção preventiva e corretiva e também na higienização e estética automotiva, comprometida em oferecer soluções inovadoras e serviços de alta qualidade. </p>
+                <p>Com uma equipe experiente e apaixonada, buscamos constantemente superar as expectativas dos nossos clientes.</p>
+                <p>Descubra como podemos fazer a diferença para você. </p>
+            </div>
+            <img src="resources/img/logo.png">
+        </div>
     </section>
 
     <footer>

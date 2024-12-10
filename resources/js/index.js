@@ -21,3 +21,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }, index * 100);
     });
 });
+
+function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    
+    navLinks.classList.toggle('active');
+    hamburgerMenu.classList.toggle('active');
+}
+
+function closeMenu() {
+    const navLinks = document.getElementById('navLinks');
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    
+    navLinks.classList.remove('active');
+    hamburgerMenu.classList.remove('active');
+}

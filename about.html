@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Prime - Excelência em cada detalhe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel='shorcut icon' href="resources/img/logo.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="resources/css/index.css?v=<?= time() ?>">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html"><img src="resources/img/logo.png" width="50px" alt="Logo"></a>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html" onclick="closeMenu()">HOME</a>
+                <a href="services.html" onclick="closeMenu()">SERVIÇOS</a>
+                <a href="about.html" onclick="closeMenu()">SOBRE NÓS</a>
+                <a href="contact.html" onclick="closeMenu()">CONTATO</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero-page" id="home">
+        <div class="hero-content-page">
+            <h1>SOBRE NÓS</h1>
+            <div class="hero-autoprime-grid">
+                <div class="hero-autoprime">
+                    <h2>AUTOPRIME</h2>
+                    <h3>Excelência em cada detalhe.</h3>
+                </div>
+                <img src="resources/img/logo.png">
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="section-title">
+            <h2>Sobre Nós</h2>
+        </div>
+        
+        <div class="about-grid">
+            <div class="about-p">
+                <p>Somos uma empresa dedicada a troca de óleo e filtros de motor e transmissão, manutenção preventiva e corretiva e também na higienização e estética automotiva, comprometida em oferecer soluções inovadoras e serviços de alta qualidade. </p>
+                <p>Com uma equipe experiente e apaixonada, buscamos constantemente superar as expectativas dos nossos clientes.</p>
+                <p>Descubra como podemos fazer a diferença para você. </p>
+            </div>
+            <img src="resources/img/logo.png">
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="section-title">
+            <h2>O que dizem nossos clientes?</h2>
+        </div>
+        <div class="testimonials-container">
+            <div class="testimonials-grid">
+            </div>
+        </div>
+        <div class="navigation-dots">
+        </div>
+        <script src="resources/js/coments.js"></script>
+    </section>
+
+    <footer>
+        <div class="logo">AUTO PRIME</div>
+        <div class="address">
+            R. Manoel Macedo, 16 - São Cristóvão, Belo Horizonte - MG, 31110-440
+        </div>
+    </footer>
+    <script src="resources/js/index.js"></script>
+</body>
+</html>
