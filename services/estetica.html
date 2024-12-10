@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Prime - Excelência em cada detalhe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Questrial&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel='shorcut icon' href="../resources/img/logo.png" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../resources/css/index.css?v=<?= time() ?>">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../"><img src="../resources/img/logo.png" width="50px" alt="Logo"></a>
+            <div class="hamburger-menu" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="../index.html" onclick="closeMenu()">HOME</a>
+                <a href="../services.html" onclick="closeMenu()">SERVIÇOS</a>
+                <a href="../service.html" onclick="closeMenu()">SOBRE NÓS</a>
+                <a href="../contact.html" onclick="closeMenu()">CONTATO</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="service" id="service">
+        <div class="service-grid">
+            <img src="../resources/img/servico_limpeza_e_estetica.jpg">
+            <div class="service-p">
+                <h1>Estética & limpeza automotiva</h1>
+                <p>Descrição: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+        <div class="section-button">
+            <a href="contact.html"><button>Entre em contato</button></a>
+         </div>
+    </section>
+
+    <footer>
+        <div class="logo">AUTO PRIME</div>
+        <div class="address">
+            R. Manoel Macedo, 16 - São Cristóvão, Belo Horizonte - MG, 31110-440
+        </div>
+        <div class="social">
+            <a target="_blank"  href="https://www.facebook.com/bhautoprime/"><img src="../resources/svg/facebook-svgrepo-com.svg"></a>
+            <a target="_blank"  href="https://www.instagram.com/_autoprime/"><img src="../resources/svg/instagram-svgrepo-com.svg"></a>
+            <a target="_blank"  href="https://api.whatsapp.com/send?phone=5531971520040&text=Olá%21+Tenho+interesse+em+um+dos+seus+produtos%2Fserviços...&fbclid=PAZXh0bgNhZW0CMTEAAaZslkuvorh8GtUOdG8eYzAE6QaVsUElSeN8qJ-w4eiecC7cbi_hsnzWYIs_aem_8wl4f2KpVG-vnjQx-TKd7w"><img src="../resources/svg/whatsapp-svgrepo-com.svg" target="_blank"></a>
+        </div>
+    </footer>
+    <script src="../resources/js/index.js"></script>
+</body>
+</html>
