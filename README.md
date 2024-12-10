@@ -1,5 +1,5 @@
 # AutoPrime 🚗
-![License](https://img.shields.io/badge/lucaspanzera-AutoPrime-blue) ![Badge em Desenvolvimento](https://img.shields.io/badge/Status-Em%20Desenvolvimento-blue)</br>
+![License](https://img.shields.io/badge/lucaspanzera-AutoPrime-blue) ![Badge em Desenvolvimento](https://img.shields.io/badge/Status-Finalizado-blue)</br>
 Projeto de Website para empresa AutoPrime Estética e Manutenção.
 
 ![AutoPrime](content/header.gif)
