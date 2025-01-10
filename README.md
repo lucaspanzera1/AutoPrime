@@ -28,6 +28,3 @@ $ cd AutoPrime
 
 # Abra o arquivo index.html em seu navegador
 ```
-
-## 🔄 Updates Futuros
-  * 📴 Criar páginas contato, serviço e quem somos.
